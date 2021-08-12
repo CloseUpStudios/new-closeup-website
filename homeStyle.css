@@ -1,0 +1,32 @@
+.card {
+    margin: 1rem;
+    background-color: #32184B !important;
+    color: #FBFBFB !important;
+    min-width: 50% !important;
+    transition: background-color 1s;
+}
+
+.card:hover {
+    background-color: #3e205c !important;
+}
+
+.media-content {
+    overflow: hidden !important;
+}
+
+.card .title, .card .subtitle {
+    color: white !important;
+}
+
+.image {
+    width: 61px;
+    height: 61px;
+}
+
+.image {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}

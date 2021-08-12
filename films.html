@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>films | closeup</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
+        <link rel="stylesheet" href="filmStyle.css">
+        <link rel="stylesheet" href="mainStyle.css">
+
+        <!-- VueJS -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />   
+
+        <!-- Bulma -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+        <!-- Swiper -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    </head>
+    <body>
+
+        <div id="mainView">
+
+            <popup-card film-title="placeholder"></popup-card>
+
+            <div id="overlay"></div>
+
+            <nav style="background-color: transparent;" class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="index.html" class="navbar-item">
+                        <img src="images/logo.png" alt="Logo">
+                    </a>
+               
+    
+                <a role="button" class="navbar-burger" aria-labelledby="menu" aria-expanded="false" data-target="film-navbar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                </div>
+    
+                <div id="film-navbar" class="navbar-menu">
+    
+                    <div class="navbar-start">
+    
+                        <a href="index.html" class="navbar-item">
+                            Home
+                        </a>
+    
+                    </div>
+
+                </div>
+            </nav>
+
+            <div id="meta">
+                <div class="textWrapper">
+                    <h1 class="vollkorn">Fear the Night</h1>
+                    <span class="roboto-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam </span>
+                </div>
+    
+                <div class="btnWrapper filmBtns">
+                    <button onclick="" class="btn btn-primary"><a >play</a> </button>
+                    <button onclick="moreInfoAboutFilm(this)" class="btn btn-secondary"><a >more info</a></button>
+                </div>
+
+
+            </div>
+
+            <div id="filmView">
+
+                <div id="search" >
+                    <h1 class="vollkorn">All films</h1>
+                    <input type="search" name="filmsearch" id="filmsearch" placeholder="Search films">
+                </div>
+
+                <div id="films" >
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                    <film-card film-title="Fear the Night"></film-card>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        
+
+        <!-- Custom scripts -->
+        <script src="mainScript.js" async defer></script>
+        <script src="filmScript.js" async defer></script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script src="components/filmCard.js" async defer></script>
+        <script src="components/popupCard.js" async defer></script>
+
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 5,
+              spaceBetween: 3,
+              slidesPerGroup: 4,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          </script>
+    </body>
+</html>

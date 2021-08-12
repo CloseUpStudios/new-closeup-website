@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>closeup</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="mainStyle.css">
+        <link rel="stylesheet" href="homeStyle.css">
+
+        <!-- VueJS -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />  
+
+        <!-- Bulma -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    </head>
+    <body>
+
+        <main>
+
+            <div id="top">
+                <img class="img img-logo" src="images/logo.png" alt="closeupstudios Logo" srcset="">
+            </div>
+
+            <div id="mainView">
+
+                <div class="textWrapper">
+                    <h1 class="vollkorn">closeupstudious</h1>
+                    <span class="roboto-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam </span>
+                </div>
+
+                <div class="btnWrapper">
+                    <button onclick="window.open('#about', '_self')" class="btn btn-primary"><a href="#about">about us</a> </button>
+                    <button onclick="window.open('films.html', '_self')" class="btn btn-secondary"><a href="films.html">videography</a></button>
+                </div>
+
+            </div>
+
+            <div id="about">
+                
+                <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320"><path fill="#210E34" fill-opacity="1" d="M0,224L60,229.3C120,235,240,245,360,240C480,235,600,213,720,208C840,203,960,213,1080,224C1200,235,1320,245,1380,250.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#1a76b5;"></path></svg>         
+                
+                <div class="mainWrapper">
+
+                    <h1 class="vollkorn">about us</h1>
+                    
+                    <div class="wrapper" id="core-team">
+                        <h2 class="mainHeader">Core Team</h2>
+
+                        <member-card member="Hannes" social="hanesu" about="Bruh lmao" ></member-card>
+                        <member-card member="Manuel" social="cr4yfish" about="Ayo what up"></member-card>
+
+                    </div>
+
+                    <div class="wrapper" id="extended-team">
+                        <h2 class="mainHeader">Extended Team</h2>
+
+                        <member-card member="Aitor" social="X" about="Mr. X best stuntman"></member-card>
+                        <member-card member="Efe" social="prog" about="Guck nicht in die Kamera"></member-card>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="contact">
+
+                <div class="mainWrapper">
+
+                    <h1 class="vollkorn">contact us</h1>
+
+                    <form action="">
+                        <div class="inputWrapper">
+                            <label for="">Your Name</label>
+                            <input type="email" name="" id="" maxlength="20">
+                        </div>
+    
+                        <div class="inputWrapper">
+                            <label for="">Your messages</label>
+                            <textarea name="" id="" cols="30" rows="10" ></textarea>
+                        </div>
+    
+                        <button class="btn btn-primary">send message</button>
+    
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+
+        
+        <!-- Custom scripts -->
+        <script src="mainScript.js" async defer></script>
+        <script src="components/memberCard.js" async defer></script>
+    </body>
+</html>

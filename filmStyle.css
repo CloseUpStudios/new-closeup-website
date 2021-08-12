@@ -1,0 +1,228 @@
+body, html {
+    min-height: 100vh;
+}
+
+#mainView {
+    justify-content: flex-start !important;
+    width: 100%;
+}
+
+#meta {
+    margin-top: 15%;
+    width: 90%;
+}
+
+
+#filmView {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    margin-top: 5rem;
+}
+
+#search  {
+    display: flex;
+    flex-direction: row;
+}
+
+#search input {
+    margin-left: 2rem;
+    width: 15rem;
+}
+
+
+#films {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.filmCard {
+    width: 15rem;
+    margin: .25rem;
+    transition: transform .5s;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.filmCard:hover {
+    transform: scale(1.15);
+}
+
+
+.filmCard:first-of-type {
+    margin-left: 0;
+}
+
+.filmCard .card {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.filmCard .card .card-image {
+    box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    height: 25rem;
+}
+
+.filmCard .card .card-image figure {
+    height: 100%;
+}
+
+.filmCard .card .card-image figure img {
+    max-width: none !important;
+}
+
+.filmCard .card .title {
+    color: white;
+}
+
+
+.filmBtns {
+    flex-direction: row !important;
+}
+
+.filmBtns .btn {
+    margin-right: 1rem;
+}
+
+.filmBtns .btn:last-of-type {
+    margin-right: 0;
+}
+
+
+/* film card hover details */
+
+.filmMeta {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    transition: opacity .5s;
+}
+
+.filmMetaTitle {
+    color: white;
+    font-size: 15pt;
+}
+
+
+/* film details popup */
+
+#overlay {
+    z-index: 31;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.109);
+    display: none;
+    opacity: 0;
+    transition: opacity 250ms;
+}
+
+#filmPopup {
+    position: fixed;
+    width: 75%;
+    align-self: center;
+    justify-self: center;
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: 32;
+    overflow: auto;
+    height: 80%;
+    background-color: #32184B;
+    opacity: 0;
+    display: none;
+    transition: opacity 250ms;
+}
+
+#filmPopup::-webkit-scrollbar {
+    width: 0.5rem !important;
+    background-color: #32184B !important;
+}
+
+#filmPopup::-webkit-scrollbar-thumb {
+    background-color: white !important;
+    border-radius: 5px !important;
+}
+
+#filmPopup .title {
+    color: #CFA0FE;
+    font-size: 30pt;
+}
+
+#filmPopup .content {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+#filmPopup .tag {
+    color: #F5F5F5;
+    background-color: #5D3B80;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#filmPopup .is-link {
+    color: #3C5D1C;
+    background-color: #B7F57A;
+}
+
+#filmPopup .is-link a {
+    color: inherit;
+}
+
+
+.filmMetaInfoWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.filmMetaInfoCard {
+    background-color: #5D3B80;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    align-items: flex-start;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filmMetaInfoCard:last-of-type {
+    margin-right: 0;
+}
+
+.filmMetaInfoTitle {
+    color: #CBB1E5;
+
+}
+.filmMetaInfoDesc {
+    color: #F5F5F5;
+}
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+  }

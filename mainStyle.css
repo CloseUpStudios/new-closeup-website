@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Vollkorn:ital,wght@0,900;1,400&display=swap');
+
+.roboto-light {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.roboto-reg {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.roboto-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.vollkorn {
+    font-family: 'Vollkorn', serif;
+    font-weight: 900;
+}
+
+.vollkorn-italic {
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+a:hover {
+    color: inherit !important;
+}
+
+::selection {
+    background-color: white;
+    color: black;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem !important;
+    background-color: black !important;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white !important;
+    border-radius: 10px !important;
+}
+
+body, html {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #210E34;
+}
+
+
+#mainView {
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/door.png");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 55%;
+    height: 100vh;
+    justify-content: center;
+    padding: 5rem;
+    padding-top: 0;
+}
+
+
+#top {
+    position: absolute;
+    top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.textWrapper {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.textWrapper h1 {
+    margin-bottom: .1rem;
+    font-size: 40pt;
+}
+
+.textWrapper span {
+    width: 25rem;
+    display: block;
+    word-wrap: break-word;
+    font-size: 15pt;
+}
+
+.btnWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+
+.btn {
+    padding: 1rem 2.2rem;
+    width: 15rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20pt;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.btn a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    z-index: 3;
+    position: relative;
+}
+
+
+/* btns */
+
+    .btn-primary {
+        background-color: #A85BF4;
+        border: none;
+        color: #542D7B;
+        box-shadow: 0 0 150px #8000ff67;
+        transition: box-shadow .5s;
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 0 150px #8000ffda;
+    }
+
+
+    .btn-secondary {
+        background-color: transparent;
+        border: solid 5px #B7F57A;
+        color: #B7F57A;
+        font-size: 15pt;
+        box-shadow: 0 0 150px #b8f57a2c;
+        transition: box-shadow .5s, color .5s;
+    }
+
+    .btn-secondary:hover {
+        box-shadow: 0 0 150px #b8f57a6e;
+        color: #537730;
+    }
+
+    .btn-secondary::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #b8f57a;
+        transform: scaleX(0);
+        z-index: 1;
+        transform-origin: 0 95%;
+        transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .btn-secondary:hover::before {
+        transform: scale(1);
+    }
+
+    .btn-tertiary {
+        padding: 0.5rem 2.5rem;
+        width: fit-content;
+        font-size: 15pt;
+        background-color: #a85bf400;
+        border: none;
+        border: solid 5px #542D7B;
+        color: #542D7B;
+        box-shadow: 0 0 150px #8000ff67;
+        transition: box-shadow .5s, color .25s, background-color .25s;
+    }
+
+    .btn-tertiary:hover {
+        color: #8e58c3;
+        background-color: #a85bf421;
+    }
+
+
+
+
+/* / btns */
+
+.img-logo {
+    width: 2rem;
+    padding: .5rem;
+}
+
+
+/* about */
+
+#about, #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#about h1, #contact h1, #filmView h1 {
+    color: #CFA0FE;
+    font-size: 25pt;
+}
+
+#about h2 {
+    color: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+#wave {
+    position: relative;
+    height: fit-content;
+    transform: translateY(-90%);
+}
+
+
+.mainWrapper, .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+
+
+
+/* contact */
+
+#contact form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact form .btn {
+    font-size: 15pt;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    align-items: center;
+    width: 65%;
+}
+
+.inputWrapper:last-of-type {
+    margin-bottom: 0;
+}
+
+.inputWrapper label {
+    margin-bottom: .5rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+input, textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: .5rem !important;
+}
+
+input {
+    min-height: .5rem;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+input, textarea {
+    background-color: #D9CBE7;
+    border: solid 1px #D9CBE7;
+    border-radius: 5px;
+}
+
+input:focus-visible, textarea:focus-visible {
+    border: solid 1px #7CFC00;
+    outline: none;
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+    z-index: 40 !important;
+}
+
+/* media queries */
+
+@media (min-width: 1200px) {
+    .mainWrapper {
+        transform: translateY(-30%);
+    }
+}
+
+@media (max-width: 768px) {
+    #filmView {
+        padding: .5rem;
+        align-items: center;
+    }
+    #films {
+        justify-content: center;
+        margin: 0;
+    }
+    .filmCard {
+        width: 12rem;
+    }
+    #mainView {
+        align-items: center;
+        padding: 1rem;
+    }
+    #mainView .textWrapper {
+        text-align: center;
+    }
+    #mainView span {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+    .btnWrapper {
+        align-items: center;
+        width: 100%;
+    }
+    .filmBtns {
+        flex-direction: column !important;
+    }
+    #filmPopup .tag, #filmPopup .filmMetaInfoCard {
+        margin-bottom: .5rem;
+        margin-right: 0.5rem;
+        width: fit-content;
+    }
+    #search  {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #search input {
+        margin-left: 0;
+    }
+    #search h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .textWrapper h1 {
+        font-size: 25pt;
+    }
+    .filmCard {
+        width: 9rem;
+    }
+}
