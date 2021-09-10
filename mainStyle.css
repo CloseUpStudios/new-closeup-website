@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Vollkorn:ital,wght@0,900;1,400&display=swap');
 
+/* smooth scroll */
+html {
+    scroll-behavior: smooth;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 .roboto-light {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -26,6 +37,80 @@
     font-style: italic;
 }
 
+/*
+    inputs
+*/
+
+
+input {
+    background: none;
+    color: #A85BF4;
+    border-radius: 9px;
+    font-size: 16pt;
+    padding: 0.5em 0.5em;
+    outline: none;
+    z-index: 3;
+    border: none !important;
+    color: white;
+}
+
+input:focus-visible {
+    outline: none;
+    border: solid 2px #A85BF4;
+    background: rgba(243, 243, 243, 0.034);
+}
+
+.customLabel {
+    position: absolute;
+    margin-left: 1em;
+    background-color: transparent;
+    color: white;
+    padding: 0.25em;
+    transform: translateX(0.5em);
+    transition: transform 0.25s;
+}
+
+.customInput {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid 2px #A85BF4;
+    border-radius: 9px;
+    position: relative;
+}
+
+#filmsearch {
+    background: none;
+    color: white;
+    border-radius: 9px;
+    font-size: 16pt;
+    padding: 0.5em 0.5em;
+    outline: none;
+    z-index: 3;
+    border: none;
+    background-color: #ffffff07;
+    width: 18rem;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+.customInput:focus-visible {
+    border: solid 4px #B7F57A;
+}
+
+
+@media screen and (max-width: 360px) {
+    input[type="text"] {
+        width: 14rem;
+    }
+}
+
+
+
+
 a:hover {
     color: inherit !important;
 }
@@ -35,12 +120,12 @@ a:hover {
     color: black;
 }
 
-body::-webkit-scrollbar {
-    width: 0.5rem !important;
+::-webkit-scrollbar {
+    width: 0.25rem !important;
     background-color: black !important;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: white !important;
     border-radius: 10px !important;
 }
@@ -205,7 +290,7 @@ body, html {
     margin-bottom: 2rem;
 }
 
-#about h1, #contact h1, #filmView h1 {
+#about h1, #contact h1, .filmView h1 {
     color: #CFA0FE;
     font-size: 25pt;
 }
@@ -230,8 +315,6 @@ body, html {
     justify-content: flex-start;
     width: 90%;
 }
-
-
 
 
 /* contact */
@@ -266,28 +349,24 @@ body, html {
     font-weight: 300;
 }
 
-input, textarea {
+textarea {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     padding: .5rem !important;
 }
 
-input {
-    min-height: .5rem;
-    width: 100%;
-}
 
 textarea {
     width: 100%;
 }
 
-input, textarea {
+textarea {
     background-color: #D9CBE7;
     border: solid 1px #D9CBE7;
     border-radius: 5px;
 }
 
-input:focus-visible, textarea:focus-visible {
+textarea:focus-visible {
     border: solid 1px #7CFC00;
     outline: none;
 }
@@ -306,11 +385,11 @@ input:focus-visible, textarea:focus-visible {
 }
 
 @media (max-width: 768px) {
-    #filmView {
+    .filmView {
         padding: .5rem;
         align-items: center;
     }
-    #films {
+    .filmSelection {
         justify-content: center;
         margin: 0;
     }
@@ -319,6 +398,9 @@ input:focus-visible, textarea:focus-visible {
     }
     #mainView {
         align-items: center;
+        padding: 1rem;
+    }
+    #meta {
         padding: 1rem;
     }
     #mainView .textWrapper {
@@ -344,6 +426,7 @@ input:focus-visible, textarea:focus-visible {
     #search  {
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 1rem;
     }
     #search input {
         margin-left: 0;

@@ -14,6 +14,7 @@
 
         <!-- VueJS -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />   
 
@@ -24,8 +25,14 @@
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     </head>
-    <body>
+    <body onload="addEventListenersToInputs();initSearch();">
+        <!---<iframe id="mainViewPlayer" src="https://www.youtube.com/embed/AWd4_b7-iuE?enablejsapi=1?controls=0?autoplay=1" frameborder="0" autoplay="1"></iframe>
+        -->
+        <video id="mainViewPlayer" autoplay muted>
+            <source src="https://www.cr4yfish.digital:8443/video/F324w6LjAVudnrB6" type="video/mp4">
 
+            <!--<source src="http://localhost:8443/video/F324w6LjAVudnrB6" type="video/mp4">-->
+        </video>
         <div id="mainView">
 
             <popup-card film-title="placeholder"></popup-card>
@@ -67,38 +74,50 @@
     
                 <div class="btnWrapper filmBtns">
                     <button onclick="" class="btn btn-primary"><a >play</a> </button>
-                    <button onclick="moreInfoAboutFilm(this)" class="btn btn-secondary"><a >more info</a></button>
+                    <button onclick="filmCardOpen(this,1)" class="btn btn-secondary"><a >more info</a></button>
                 </div>
-
-
             </div>
 
-            <div id="filmView">
-
+   
+           <!-- Wer das liest ist doof -->
+            <div class="filmView">
+        
                 <div id="search" >
                     <h1 class="vollkorn">All films</h1>
-                    <input type="search" name="filmsearch" id="filmsearch" placeholder="Search films">
+                    <div class="customInput">
+                        <label for="filmsearch" class="customLabel" >Search films</label>
+                        <input type="text" name="filmsearch" id="filmsearch">
+                    </div>
                 </div>
 
-                <div id="films" >
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
-                    <film-card film-title="Fear the Night"></film-card>
+                <div id="films" class="filmSelection" >
+
                 </div>
 
             </div>
 
+            <div class="filmView extraView">
+        
+                <h1 class="vollkorn">Action films</h1>
+
+                <div id="action" class="filmSelection">
+
+                </div>
+
+            </div>
+
+            <div class="filmView extraView">
+        
+                <h1 class="vollkorn">Drama films</h1>
+
+                <div id="drama" class="filmSelection">
+
+                </div>
+
+            </div>
 
         </div>
 
-        
 
         <!-- Custom scripts -->
         <script src="mainScript.js" async defer></script>
