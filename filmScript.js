@@ -2,8 +2,8 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//const HOST = "https://www.cr4yfish.digital:8443";
-const HOST = "http://localhost:8443";
+const HOST = "https://www.cr4yfish.digital:8443";
+//const HOST = "http://localhost:8443";
 
 // get description for title film 
 
@@ -237,6 +237,7 @@ function makeFilmCard(title, tags, imageSrc, id, reqParent) {
           //
 
       let image = document.createElement("img");
+          image.setAttribute("loading", "lazy");
           getImage(imageSrc)
           .then(function (imageURL) {
             image.src = imageURL;
